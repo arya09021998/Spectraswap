@@ -90,7 +90,7 @@ const CakeDataRow = () => {
       </StyledColumn>
       <Flex flexDirection="column">
         <Text color="textSubtle">{t('Total Value Locked')}</Text>
-        {totalValue ? (
+        {mcap?.gt(0) && mcapString ? (
           <Heading scale="lg">{t('$%marketCap%', { marketCap: totalValue.toNumber().toLocaleString() })}</Heading>
           // <Balance decimals={0} lineHeight="1.1" fontSize="24px" bold value={totalValue.toNumber()} />
         ) : (

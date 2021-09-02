@@ -102,6 +102,20 @@ const Hero = () => {
         alignItems={['flex-end', null, null, 'center']}
         justifyContent="center"
       >
+        <Flex flex="1" flexDirection="column">
+          <Heading scale="xl" color="secondary" mb="24px">
+            {t("Spectra")}
+          </Heading>
+          <Heading scale="md" mb="24px">
+            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
+          </Heading>
+          <Flex>
+            {!account && <ConnectWalletButton mr="8px" />}
+            <Link mr="16px" href="/swap">
+              <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
+            </Link>
+          </Flex>
+        </Flex>
         <Flex
           height={['192px', null, null, '100%']}
           width={['192px', null, null, '100%']}
@@ -113,22 +127,8 @@ const Hero = () => {
             <img src={`${imagePath}${imageSrc}.png`} srcSet={getSrcSet(imagePath, imageSrc)} alt={t('Lunar bunny')} />
           </BunnyWrapper>
           <StarsWrapper>
-            <CompositeImage {...starsImage} />
+            {/* <CompositeImage {...starsImage} /> */}
           </StarsWrapper>
-        </Flex>
-        <Flex flex="1" flexDirection="column">
-          <Heading scale="xl" color="secondary" mb="24px">
-            {t("Spectra Token is your custom texts")}
-          </Heading>
-          <Heading scale="md" mb="24px">
-            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
-          </Heading>
-          <Flex>
-            {!account && <ConnectWalletButton mr="8px" />}
-            <Link mr="16px" href="/swap">
-              <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
-            </Link>
-          </Flex>
         </Flex>
       </Flex>
     </>

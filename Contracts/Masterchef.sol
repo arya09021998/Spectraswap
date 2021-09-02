@@ -311,7 +311,6 @@ pragma solidity >=0.4.0;
 
 contract Ownable is Context {
     address private _owner;
-    address private _owner1;
 
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
 

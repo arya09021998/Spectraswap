@@ -41,7 +41,7 @@ const Wrapper = styled(Box)<{ maxHeight: string }>`
 
 const DummyImg = styled.img<{ maxHeight: string }>`
   max-height: ${({ maxHeight }) => maxHeight};
-  visibility: hidden;
+  // visibility: hidden;
 `
 
 const ImageWrapper = styled(Box)`
@@ -88,15 +88,15 @@ const CompositeImage: React.FC<ComponentProps> = ({ path, attributes, maxHeight 
   return (
     <Wrapper maxHeight={maxHeight}>
       <DummyImg
-        src={getImageUrl(path, attributes[0].src)}
+        src={getImageUrl(path, attributes[2].src)}
         maxHeight={maxHeight}
-        srcSet={getSrcSet(path, attributes[0].src)}
+        srcSet={getSrcSet(path, attributes[2].src)}
       />
-      {attributes.map((image) => (
+      {/* {attributes.map((image) => (
         <ImageWrapper key={image.src}>
           <img src={getImageUrl(path, image.src)} srcSet={getSrcSet(path, image.src)} alt={image.alt} />
         </ImageWrapper>
-      ))}
+      ))} */}
     </Wrapper>
   )
 }

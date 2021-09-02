@@ -3,7 +3,7 @@ import { ChainId, Token } from '@pancakeswap/sdk'
 export const CAKE: { [chainId: number]: Token } = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0x9005601469de9cfc10CDB68ce0f07B80D5682204', /* 0xb9cEfdF81E6E2a561b737a21dDcFD4004C3E8E19 */
+    '0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f',
     9,
     'SPC',
     'Spectra',
@@ -67,11 +67,11 @@ const tokens = {
   cake: {
     symbol: 'SPC',
     address: {
-      56: '0x9005601469de9cfc10CDB68ce0f07B80D5682204', /* 0xb9cEfdF81E6E2a561b737a21dDcFD4004C3E8E19 */
+      56: '0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f',
       97: '',
     },
     decimals: 9,
-    projectLink: 'https://inspeer.io/',
+    projectLink: 'https://spectratoken.finance/',
   },
   babybitc: {
     symbol: 'BABYBITC',
@@ -1891,14 +1891,14 @@ const tokens = {
     decimals: 18,
     projectLink: 'https://appv2.rampdefi.com/#/',
   },
-  bp: {
-    symbol: 'BP',
+  insp: {
+    symbol: 'INSP',
     address: {
-      56: '0xacb8f52dc63bb752a51186d1c55868adbffee9c1',
+      56: '0xeB09843abc3e237824Ae40a93fa7F6F2fEB82798',
       97: '',
     },
     decimals: 18,
-    projectLink: 'https://www.bunnypark.com/',
+    projectLink: 'https://inspeer.io/',
   },
   sfund: {
     symbol: 'SFUND',

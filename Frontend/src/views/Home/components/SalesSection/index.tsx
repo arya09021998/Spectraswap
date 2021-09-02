@@ -35,6 +35,14 @@ const SalesSection: React.FC<SalesSectionProps> = (props) => {
         justifyContent="center"
       >
         <Flex
+          height={['192px', null, null, '100%']}
+          width={['192px', null, null, '100%']}
+          flex={[null, null, null, '1']}
+          mb={['24px', null, null, '0']}
+        >
+          <CompositeImage {...images} />
+        </Flex>
+        <Flex
           flexDirection="column"
           flex="1"
           ml={[null, null, null, reverse && '64px']}
@@ -57,14 +65,6 @@ const SalesSection: React.FC<SalesSectionProps> = (props) => {
               {t(secondaryButton.text)}
             </Link>
           </Flex>
-        </Flex>
-        <Flex
-          height={['192px', null, null, '100%']}
-          width={['192px', null, null, '100%']}
-          flex={[null, null, null, '1']}
-          mb={['24px', null, null, '0']}
-        >
-          <CompositeImage {...images} />
         </Flex>
       </Flex>
     </Flex>
