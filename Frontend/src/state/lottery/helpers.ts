@@ -128,7 +128,8 @@ export const fetchCurrentLotteryIdAndMaxBuy = async () => {
 export const getRoundIdsArray = (currentLotteryId: string): string[] => {
   const currentIdAsInt = parseInt(currentLotteryId, 10)
   const roundIds = []
-  for (let i = 0; i < NUM_ROUNDS_TO_FETCH_FROM_NODES; i++) {
+  const fetchnodenum = currentIdAsInt >= 3 ? NUM_ROUNDS_TO_FETCH_FROM_NODES : currentIdAsInt
+  for (let i = 0; i < fetchnodenum; i++) {
     roundIds.push(currentIdAsInt - i)
   }
   return roundIds.map((roundId) => roundId.toString())

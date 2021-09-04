@@ -37,7 +37,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   //   href: '/prediction',
   // },
   {
-    label: t('Lottery(Coming Soon)'),
+    label: t('Lottery'),
     icon: 'TicketIcon',
     href: '/lottery',
   },
@@ -87,11 +87,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: t('DexGuru'),
-        href: 'https://dex.guru/token/0xb9cEfdF81E6E2a561b737a21dDcFD4004C3E8E19-bsc',
+        href: 'https://dex.guru/token/0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f-bsc',
       },
       {
         label: t('PooCoin'),
-        href: 'https://poocoin.app/tokens/0xb9cEfdF81E6E2a561b737a21dDcFD4004C3E8E19',
+        href: 'https://poocoin.app/tokens/0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f',
       }
     ],
   },
@@ -129,14 +129,14 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
         label: t('Github'),
         href: 'https://github.com/SpectraToken',
       },
-      {
-        label: t('Docs'),
-        href: 'https://docs.spectradex',
-      },
-      {
-        label: t('Blog'),
-        href: 'https://spectradex.medium.com',
-      },
+      // {
+      //   label: t('Docs'),
+      //   href: 'https://docs.spectradex',
+      // },
+      // {
+      //   label: t('Blog'),
+      //   href: 'https://spectradex.medium.com',
+      // },
     ],
   },
   {

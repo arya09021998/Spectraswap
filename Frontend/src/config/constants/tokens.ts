@@ -3,7 +3,7 @@ import { ChainId, Token } from '@pancakeswap/sdk'
 export const CAKE: { [chainId: number]: Token } = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f',
+    '0x9005601469de9cfc10CDB68ce0f07B80D5682204', /* 0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f */
     9,
     'SPC',
     'Spectra',
@@ -12,7 +12,7 @@ export const CAKE: { [chainId: number]: Token } = {
     ChainId.TESTNET,
     '0xb9cEfdF81E6E2a561b737a21dDcFD4004C3E8E19',
     9,
-    'TDN',
+    'SPC',
     'Spectra',
   ),
 }
@@ -67,7 +67,7 @@ const tokens = {
   cake: {
     symbol: 'SPC',
     address: {
-      56: '0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f',
+      56: '0x9005601469de9cfc10CDB68ce0f07B80D5682204',
       97: '',
     },
     decimals: 9,

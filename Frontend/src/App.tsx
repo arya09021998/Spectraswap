@@ -42,7 +42,7 @@ const StyledParticles = styled(Particles)`
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
 // const FarmAuction = lazy(() => import('./views/FarmAuction'))
-// const Lottery = lazy(() => import('./views/Lottery'))
+const Lottery = lazy(() => import('./views/Lottery'))
 // const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
 // const Collectibles = lazy(() => import('./views/Collectibles'))
@@ -91,10 +91,10 @@ const App: React.FC = () => {
             <Route path="/pools">
               <Pools />
             </Route>
-            {/* <Route path="/lottery">
+            <Route path="/lottery">
               <Lottery />
             </Route>
-            <Route path="/ifo">
+            {/* <Route path="/ifo">
               <Ifos />
             </Route>
             <Route path="/collectibles">

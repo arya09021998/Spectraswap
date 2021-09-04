@@ -48,7 +48,7 @@ export const fetchPoolsPublicDataAsync = (currentBlock: number) => async (dispat
   const totalStakings = await fetchPoolsTotalStaking()
 
   const prices = getTokenPricesFromFarm(getState().farms.data)
-  console.log('debug->prices', prices);
+
   const liveData = poolsConfig.map((pool) => {
     const blockLimit = blockLimits.find((entry) => entry.sousId === pool.sousId)
     const totalStaking = totalStakings.find((entry) => entry.sousId === pool.sousId)
@@ -59,7 +59,6 @@ export const fetchPoolsPublicDataAsync = (currentBlock: number) => async (dispat
     const stakingTokenPrice = stakingTokenAddress ? prices[stakingTokenAddress] : 0
 
     const earningTokenAddress = pool.earningToken.address ? getAddress(pool.earningToken.address).toLowerCase() : null
-    console.log('debug->earningTokenAddress', earningTokenAddress)
     const earningTokenPrice = earningTokenAddress ? prices[earningTokenAddress] : 0
     const apr = !isPoolFinished
       ? getPoolApr(

@@ -49,9 +49,7 @@ const CakeDataRow = () => {
   const { t } = useTranslation()
   const totalSupply = useTotalSupply()
   const maxtxamount = getBalanceNumber(useMaxtxamount(), 9)
-  console.log('debug->totalSupply', totalSupply)
   const burnedBalance = getBalanceNumber(useBurnedBalance(getCakeAddress()), 9)
-  console.log('debug->totalSupply', burnedBalance)
   const cakeSupply = totalSupply ? getBalanceNumber(totalSupply, 9) - burnedBalance : 0
   const cakePriceBusd = usePriceCakeBusd()
   const mcap = cakePriceBusd.times(cakeSupply)

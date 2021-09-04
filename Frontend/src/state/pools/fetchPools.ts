@@ -93,7 +93,7 @@ export const fetchPoolsStakingLimits = async (
   // Note: We cannot batch the calls via multicall because V1 pools do not have "poolLimitPerUser" and will throw an error
   const stakingLimitPromises = validPools.map((validPool) => fetchPoolStakingLimit(validPool.sousId))
   const stakingLimits = await Promise.all(stakingLimitPromises)
-  console.log('debug->stakinglimits', stakingLimits)
+
   return stakingLimits.reduce((accum, stakingLimit, index) => {
     return {
       ...accum,

@@ -89,7 +89,7 @@ const BuyTicketsModal: React.FC<BuyTicketsModalProps> = ({ onDismiss }) => {
   const cakePriceBusd = usePriceCakeBusd()
   const dispatch = useAppDispatch()
   const hasFetchedBalance = fetchStatus === FetchStatus.SUCCESS
-  const userCakeDisplayBalance = getFullDisplayBalance(userCake, 18, 3)
+  const userCakeDisplayBalance = getFullDisplayBalance(userCake, 9, 3)
 
   const TooltipComponent = () => (
     <>
@@ -200,9 +200,9 @@ const BuyTicketsModal: React.FC<BuyTicketsModalProps> = ({ onDismiss }) => {
     const costAfterDiscount = getTicketCostAfterDiscount(numberOfTicketsToBuy)
     const costBeforeDiscount = priceTicketInCake.times(numberOfTicketsToBuy)
     const discountBeingApplied = costBeforeDiscount.minus(costAfterDiscount)
-    setTicketCostBeforeDiscount(costBeforeDiscount.gt(0) ? getFullDisplayBalance(costBeforeDiscount) : '0')
-    setTotalCost(costAfterDiscount.gt(0) ? getFullDisplayBalance(costAfterDiscount) : '0')
-    setDiscountValue(discountBeingApplied.gt(0) ? getFullDisplayBalance(discountBeingApplied, 18, 5) : '0')
+    setTicketCostBeforeDiscount(costBeforeDiscount.gt(0) ? getFullDisplayBalance(costBeforeDiscount, 9) : '0')
+    setTotalCost(costAfterDiscount.gt(0) ? getFullDisplayBalance(costAfterDiscount, 9) : '0')
+    setDiscountValue(discountBeingApplied.gt(0) ? getFullDisplayBalance(discountBeingApplied, 9, 5) : '0')
   }, [ticketsToBuy, priceTicketInCake, discountDivisor, getTicketCostAfterDiscount])
 
   const getNumTicketsByPercentage = (percentage: number): number => {
@@ -322,7 +322,7 @@ const BuyTicketsModal: React.FC<BuyTicketsModalProps> = ({ onDismiss }) => {
         onUserInput={handleInputChange}
         currencyValue={
           cakePriceBusd.gt(0) &&
-          `~${ticketsToBuy ? getFullDisplayBalance(priceTicketInCake.times(new BigNumber(ticketsToBuy))) : '0.00'} CAKE`
+          `~${ticketsToBuy ? getFullDisplayBalance(priceTicketInCake.times(new BigNumber(ticketsToBuy)), 9) : '0.00'} SPC`
         }
       />
       <Flex alignItems="center" justifyContent="flex-end" mt="4px" mb="12px">
@@ -334,7 +334,7 @@ const BuyTicketsModal: React.FC<BuyTicketsModalProps> = ({ onDismiss }) => {
           )}
           <Flex justifyContent="flex-end">
             <Text fontSize="12px" color="textSubtle" mr="4px">
-              CAKE {t('Balance')}:
+              SPC {t('Balance')}:
             </Text>
             {hasFetchedBalance ? (
               <Text fontSize="12px" color="textSubtle">
@@ -376,10 +376,10 @@ const BuyTicketsModal: React.FC<BuyTicketsModalProps> = ({ onDismiss }) => {
       <Flex flexDirection="column">
         <Flex mb="8px" justifyContent="space-between">
           <Text color="textSubtle" fontSize="14px">
-            {t('Cost')} (CAKE)
+            {t('Cost')} (SPC)
           </Text>
           <Text color="textSubtle" fontSize="14px">
-            {priceTicketInCake && getFullDisplayBalance(priceTicketInCake.times(ticketsToBuy || 0))} CAKE
+            {priceTicketInCake && getFullDisplayBalance(priceTicketInCake.times(ticketsToBuy || 0), 9)} SPC
           </Text>
         </Flex>
         <Flex mb="8px" justifyContent="space-between">
@@ -395,7 +395,7 @@ const BuyTicketsModal: React.FC<BuyTicketsModalProps> = ({ onDismiss }) => {
             </Flex>
           </Flex>
           <Text fontSize="14px" color="textSubtle">
-            ~{discountValue} CAKE
+            ~{discountValue} SPC
           </Text>
         </Flex>
         <Flex borderTop={`1px solid ${theme.colors.cardBorder}`} pt="8px" mb="24px" justifyContent="space-between">
@@ -403,7 +403,7 @@ const BuyTicketsModal: React.FC<BuyTicketsModalProps> = ({ onDismiss }) => {
             {t('You pay')}
           </Text>
           <Text fontSize="16px" bold>
-            ~{totalCost} CAKE
+            ~{totalCost} SPC
           </Text>
         </Flex>
 

@@ -11,7 +11,7 @@ const StyledNumberWrapper = styled(Flex)`
   padding: 4px 16px;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: ${({ theme }) => theme.radii.default};
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.backgroundAlt};
   justify-content: space-between;
 `
 

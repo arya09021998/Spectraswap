@@ -129,8 +129,11 @@ const getUserLotteryData = async (account: string, currentLotteryId: string): Pr
 
   const lotteriesNodeData = await fetchMultipleLotteries(idsForLotteriesNodeCall)
   const graphResponse = await getGraphLotteryUser(account)
+  console.log('debug->graphResponse', graphResponse)
   const mergedRoundData = applyNodeDataToUserGraphResponse(userRoundsNodeData, graphResponse.rounds, lotteriesNodeData)
+  console.log('debug->mergedRoundData', mergedRoundData)
   const graphResponseWithNodeRounds = { ...graphResponse, rounds: mergedRoundData }
+  console.log('debug->graphResponseWithNodeRounds', graphResponseWithNodeRounds)
   return graphResponseWithNodeRounds
 }
 

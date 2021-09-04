@@ -49,7 +49,7 @@ const StyledCard = styled(Card)`
 `
 
 const NextDrawWrapper = styled.div`
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.backgroundAlt};
   padding: 24px;
 `
 
@@ -91,7 +91,7 @@ const NextDrawCard = () => {
             bold
             prefix="~$"
             value={getBalanceNumber(prizeInBusd)}
-            decimals={0}
+            decimals={6}
           />
         )}
         {prizeInBusd.isNaN() ? (
@@ -101,9 +101,9 @@ const NextDrawCard = () => {
             fontSize="14px"
             color="textSubtle"
             textAlign={['center', null, null, 'left']}
-            unit=" CAKE"
-            value={getBalanceNumber(amountCollectedInCake)}
-            decimals={0}
+            unit=" SPC"
+            value={getBalanceNumber(amountCollectedInCake, 9)}
+            decimals={3}
           />
         )}
       </>

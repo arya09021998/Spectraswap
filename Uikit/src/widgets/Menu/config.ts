@@ -146,30 +146,30 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/inspeerdefi",
+        href: "https://t.me/spectrabsc",
       },
-      {
-        label: "中文",
-        href: "https://t.me/inspeerdefi_CN",
-      },
-      {
-        label: "русский",
-        href: "https://t.me/inspeerdefi_ru",
-      },
-      {
-        label: "日本語",
-        href: "https://t.me/inspeerdefijp",
-      },
-      {
-        label: "Announcements",
-        href: "https://t.me/inspeerdefiAnn",
-      },
+      // {
+      //   label: "中文",
+      //   href: "https://t.me/inspeerdefi_CN",
+      // },
+      // {
+      //   label: "русский",
+      //   href: "https://t.me/inspeerdefi_ru",
+      // },
+      // {
+      //   label: "日本語",
+      //   href: "https://t.me/inspeerdefijp",
+      // },
+      // {
+      //   label: "Announcements",
+      //   href: "https://t.me/inspeerdefiAnn",
+      // },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/inspeerdefi",
+    href: "https://twitter.com/spectratoken",
   },
 ];
 

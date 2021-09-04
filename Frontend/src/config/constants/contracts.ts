@@ -1,7 +1,7 @@
 export default {
   masterChef: {
     97: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
-    56: '0x7177AC20b871ca67d21949B002cafb3682c257dF',
+    56: '0x894c917c7C49677fD759fe701BB2371B73d1d934',  /* 0x7177AC20b871ca67d21949B002cafb3682c257dF */
   },
   sousChef: {
     97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
@@ -9,7 +9,7 @@ export default {
   },
   lotteryV2: {
     97: '0x5790c3534F30437641541a0FA04C992799602998',
-    56: '0x5aF6D33DE2ccEC94efb1bDF8f92Bd58085432d2c',
+    56: '0x08052f94E87399B49fDA74E748b1425A23f97Be4',
   },
   multiCall: {
     56: '0xfF6FD90A470Aaa0c1B8A54681746b07AcdFedc9B',

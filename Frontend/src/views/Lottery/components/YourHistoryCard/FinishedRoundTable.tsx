@@ -18,7 +18,7 @@ interface FinishedRoundTableProps {
 const FinishedRoundTable: React.FC<FinishedRoundTableProps> = ({ handleHistoryRowClick }) => {
   const { t } = useTranslation()
   const userLotteryData = useGetUserLotteriesGraphData()
-
+  console.log('debug->userLotteryData', userLotteryData)
   const filteredForClaimable = userLotteryData?.rounds.filter((round) => {
     return round.status.toLowerCase() === LotteryStatus.CLAIMABLE
   })

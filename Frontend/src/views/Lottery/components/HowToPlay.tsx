@@ -197,7 +197,7 @@ const PoolAllocations = () => {
           <Text textAlign="right" bold>
             40%
           </Text>
-          <AllocationMatch color="#BDC2C4" text={t('Burn Pool')} />
+          <AllocationMatch color="#BDC2C4" text={t('Charity Wallet')} />
           <Text textAlign="right" bold>
             20%
           </Text>
@@ -213,7 +213,6 @@ const GappedFlex = styled(Flex)`
 
 const HowToPlay: React.FC = () => {
   const { t } = useTranslation()
-
   const steps: Step[] = [
     {
       label: t('Step %number%', { number: 1 }),
@@ -323,11 +322,11 @@ const HowToPlay: React.FC = () => {
             <li>
               <Text display="inline" color="textSubtle">
                 {t(
-                  '10,000 CAKE from the treasury is added to a lottery round every other day. This CAKE is of course also included in rollovers! Read more in our guide to ',
+                  '10,000 CAKE from the treasury is added to a lottery round every other day. This CAKE is of course also included in rollovers!',  /* Read more in our guide to  */
                 )}
-                <InlineLink href="https://docs.pancakeswap.finance/tokenomics/cake/cake-tokenomics">
+                {/* <InlineLink href="https://docs.pancakeswap.finance/tokenomics/cake/cake-tokenomics">
                   {t('CAKE Tokenomics')}
-                </InlineLink>
+                </InlineLink> */}
               </Text>
             </li>
           </BulletList>
@@ -337,22 +336,22 @@ const HowToPlay: React.FC = () => {
         </Flex>
       </GappedFlex>
       <Divider />
-      <Flex justifyContent="center" alignItems="center" flexDirection={['column', 'column', 'row']}>
+      {/* <Flex justifyContent="center" alignItems="center" flexDirection={['column', 'column', 'row']}>
         <Flex maxWidth="240px" mr="8px" mb="16px">
           <img src="/images/lottery/tombola.png" alt="tombola bunny" />
         </Flex>
-        <Flex maxWidth="300px" flexDirection="column">
+        <Flex maxWidth="600px" flexDirection="column">
           <Heading mb="16px" scale="md">
             {t('Still got questions?')}
           </Heading>
           <Text>
             {t('Check our in-depth guide on')}{' '}
-            <InlineLink href="https://docs.pancakeswap.finance/products/lottery/lottery-guide">
+            <InlineLink href="https://docs.spectraDex.finance/lottery/">
               {t('how to play the PancakeSwap lottery!')}
             </InlineLink>
           </Text>
         </Flex>
-      </Flex>
+      </Flex> */}
     </Box>
   )
 }

@@ -29,7 +29,7 @@ const RewardBracketDetail: React.FC<RewardBracketDetailProps> = ({
   const getRewardText = () => {
     const numberMatch = rewardBracket + 1
     if (isBurn) {
-      return t('Burn')
+      return t('Charity')
     }
     if (rewardBracket === 5) {
       return t('Match all %numberMatch%', { numberMatch })
@@ -50,7 +50,7 @@ const RewardBracketDetail: React.FC<RewardBracketDetailProps> = ({
         {isLoading || cakeAmount.isNaN() ? (
           <Skeleton my="4px" mr="10px" height={20} width={110} />
         ) : (
-          <Balance fontSize="20px" bold unit=" CAKE" value={getBalanceNumber(cakeAmount)} decimals={0} />
+          <Balance fontSize="20px" bold unit=" SPC" value={getBalanceNumber(cakeAmount, 9)} decimals={3} />
         )}
         {isLoading || cakeAmount.isNaN() ? (
           <>
@@ -61,7 +61,7 @@ const RewardBracketDetail: React.FC<RewardBracketDetailProps> = ({
             fontSize="12px"
             color="textSubtle"
             prefix="~$"
-            value={getBalanceNumber(cakeAmount.times(cakePriceBusd))}
+            value={getBalanceNumber(cakeAmount.times(cakePriceBusd), 9)}
             decimals={0}
           />
         )}
@@ -69,7 +69,7 @@ const RewardBracketDetail: React.FC<RewardBracketDetailProps> = ({
           <>
             {numberWinners !== '0' && (
               <Text fontSize="12px" color="textSubtle">
-                {getFullDisplayBalance(cakeAmount.div(parseInt(numberWinners, 10)), 18, 2)} CAKE {t('each')}
+                {getFullDisplayBalance(cakeAmount.div(parseInt(numberWinners, 10)), 9, 2)} SPC {t('each')}
               </Text>
             )}
             <Text fontSize="12px" color="textSubtle">

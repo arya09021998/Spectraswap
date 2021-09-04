@@ -8,7 +8,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'SPC',
     lpAddresses: {
       97: '',
-      56: '0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f',
+      56: '0x9005601469de9cfc10CDB68ce0f07B80D5682204',  /* 0x2013fe8529077c6c6177b80aCe8746F8f8A1EB4f */
     },
     token: tokens.cake,
     quoteToken: tokens.cake,
@@ -18,7 +18,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'SPC-BNB LP',
     lpAddresses: {
       97: '',
-      56: '0xA7bbD1D7e1D8c95ea0d3bd5F8a5fECD947570CAf',
+      56: '0xfd8155D7004713893556994E73EC172260073EA1', /* 0xA7bbD1D7e1D8c95ea0d3bd5F8a5fECD947570CAf */
     },
     token: tokens.cake,
     quoteToken: tokens.wbnb,
@@ -33,18 +33,18 @@ const farms: FarmConfig[] = [
     token: tokens.busd,
     quoteToken: tokens.wbnb,
   },
-  // {
-  //   pid: 6,
-  //   lpSymbol: 'SPC-BUSD LP',
-  //   lpAddresses: {
-  //     97: '',
-  //     56: '0x177366B6C35E85B52A4F64d4fE4416158b037FC9', /* This Pair address is wrong. Should be changed with correct one*/
-  //   },
-  //   token: tokens.cake,
-  //   quoteToken: tokens.busd,
-  // },
   {
     pid: 3,
+    lpSymbol: 'SPC-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0x177366B6C35E85B52A4F64d4fE4416158b037FC9',
+    },
+    token: tokens.cake,
+    quoteToken: tokens.busd,
+  },
+  {
+    pid: 5,
     lpSymbol: 'BABYBITC-BNB LP',
     lpAddresses: {
       97: '',
@@ -58,7 +58,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'HAPPY-BNB LP',
     lpAddresses: {
       97: '',
-      56: '0x82AB370d2055e083747876885E3Ad0B829CFb524',
+      56: '0x6e0cD42B42D99708E5588C43f7317D4a0802100d',
     },
     token: tokens.happy,
     quoteToken: tokens.wbnb,
